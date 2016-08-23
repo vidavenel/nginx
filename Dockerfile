@@ -1,4 +1,4 @@
-FROM php:7-fpm
+FROM nginx
 MAINTAINER Vincent DAVENEL <vincent_mil@hotmail.fr>
 
 RUN apt-get update && \
@@ -6,4 +6,5 @@ RUN apt-get update && \
 		curl \
 		libz-dev
 
-RUN docker-php-ext-install pdo_mysql
+RUN adduser -D -H -u 1000 -s \bin\bash www-data
+RUN rm /etc/nginx/conf.d/default.conf
