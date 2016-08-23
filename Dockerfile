@@ -6,7 +6,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 
 ADD nginx.conf /etc/nginx
 
-RUN adduser -D -H -u 1000 -s /bin/bash www-data
+#RUN adduser -D -H -u 1000 -s /bin/bash www-data
 
 CMD ["nginx"]
 
