@@ -3,5 +3,5 @@ MAINTAINER Vincent DAVENEL <vincent@aiglecom.com>
 
 COPY ./presta.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE /etc/nginx/certs
-EXPOSE /etc/nginx/conf.d
+VOLUME /etc/nginx/certs
+VOLUME /etc/nginx/conf.d
