@@ -4,4 +4,6 @@ MAINTAINER Vincent DAVENEL <vincent@aiglecom.com>
 VOLUME /etc/nginx/certs
 VOLUME /etc/nginx/conf.d
 
-ADD ./init /tmp
+ADD ./init /tmp/init
+
+ENTRYPOINT bash /tmp/init/init.sh
